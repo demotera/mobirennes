@@ -24,10 +24,10 @@ data_bike = import_bike_service('http://data.keolis-rennes.com/xml/?version=1.0&
 #starting_date and end_date MUST be defined if municipal data is imported
 #------------------------------------------------------------------------------------------------------------------
 
-start_date = '20110118'
-end_date = '20110501'
+start_date = '20110425'
+end_date = '20110701'
 
-star_data = import_gtfs_data('GTFS-20110118.zip', 'Metro Bus STAR')
+star_data = import_gtfs_data('GTFS-20110325.zip', 'Metro Bus STAR')
 metro_data = import_freq_data('Metro a', 'data_rennes/metro/nodes.csv', 'data_rennes/metro/edges.csv', start_date, end_date)
 
 #Create relevant layers from previously imported data (origin paramater) with a name, a color and the mode.
