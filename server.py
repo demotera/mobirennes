@@ -271,6 +271,8 @@ class Mumoro(object):
         u_obj = self.sort_objectives( u_obj )
         p = tuple()
         c = self.analyse_date( time )
+        if c['days'] < 0:
+            return json.dumps({'error': 'La date de départ est dans le passé.'})
         #Call martins with the sorted objectives
         for y in paths_array:
             s = self.g.match( y['starting_layer']['name'], float(slon), float(slat))
